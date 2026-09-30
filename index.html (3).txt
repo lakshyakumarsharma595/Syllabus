@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Syllabus</title>
+    <style>
+        /* Base Reset & Variables */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header Layout */
+        header {
+            background-color: var(--bg-light);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.25rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Columns Grid */
+        .container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        /* Sidebar Navigation Sticky Panel */
+        aside {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        aside h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+        aside ul {
+            list-style: none;
+        }
+        aside ul li {
+            margin-bottom: 0.75rem;
+        }
+        aside ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        aside ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Main Syllabus Content */
+        main {
+            max-width: 800px;
+        }
+        section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 2rem; /* Smooth scrolling padding */
+        }
+        section h2 {
+            font-size: 1.75rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        /* Information Tables & Lists */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        table th, table td {
+            border: 1px solid var(--border-color);
+            padding: 0.75rem;
+            text-align: left;
+        }
+        table th {
+            background-color: var(--bg-light);
+            font-weight: 600;
+        }
+        .week-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .week-card h3 {
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+        .week-card ul {
+            padding-left: 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Mobile View Optimization */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            aside {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CS 101: Introduction to Web Development</h1>
+        <p>Fall Semester • 4 Credits • Instructor: Dr. Jane Doe</p>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside>
+            <h2>Syllabus Menu</h2>
+            <ul>
+                <li><a href="#overview">Course Overview</a></li>
+                <li><a href="#grading">Grading Policy</a></li>
+                <li><a href="#schedule">Weekly Schedule</a></li>
+                <li><a href="#policies">Course Policies</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content View -->
+        <main>
+            <!-- Overview Section -->
+            <section id="overview">
+                <h2>Course Overview</h2>
+                <p>This course provides a comprehensive introduction to modern web development frameworks and architectures. Students will focus heavily on front-end structures using Semantic HTML, styling through custom CSS layouts, and client-side logic execution utilizing modern JavaScript environments.</p>
+            </section>
+
+            <!-- Grading Section -->
+            <section id="grading">
+                <h2>Grading Policy</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Assessment Component</th>
+                            <th>Weighting</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Weekly Labs & Practical Exercises</td>
+                            <td><strong>30%</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Midterm Practical Examination</td>
+                            <td><strong>30%</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Final Multi-Page Project Deployment</td>
+                            <td><strong>40%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Weekly Schedule Section -->
+            <section id="schedule">
+                <h2>Weekly Schedule</h2>
+                
+                <div class="week-card">
+                    <h3>Week 1: Document Structure & Syntax</h3>
+                    <p>Introduction to the architecture of the World Wide Web, deployment infrastructure, and text formatting conventions.</p>
+                    <ul>
+                        <li>Semantic layout element tags</li>
+                        <li>Configuring global document head metadata</li>
+                    </ul>
+                </div>
+
+                <div class="week-card">
+                    <h3>Week 2: Advanced Style Application</h3>
+                    <p>Cascading rules, priority mapping, inheritance structures, and fluid layout styling engines.</p>
+                    <ul>
+                        <li>Box model configurations and margin behavior</li>
+                        <li>Grid layouts and Flexbox alignment mechanics</li>
+                    </ul>
+                </div>
+
+                <div class="week-card">
+                    <h3>Week 3: Scripted Behavioral Engineering</h3>
+                    <p>Algorithmic logic integration using dynamic client-side scripting tools.</p>
+                    <ul>
+                        <li>Variable assignment wrappers and conditional pathways</li>
+                        <li>Document Object Model (DOM) node mutation events</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Policies Section -->
+            <section id="policies">
+                <h2>Course Policies</h2>
+                <p><strong>Academic Honesty:</strong> All source code submitted across assessment profiles must exclusively represent individual student production. Code structures derived via external automated models or uncredited collaborative assets violate the core institutional academic integrity standard.</p>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
+
